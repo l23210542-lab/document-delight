@@ -59,9 +59,9 @@ function DashboardPage() {
     >
       <section className="grid grid-cols-2 gap-4 lg:grid-cols-4">
         <KpiCard label="Facturación USD" value="$48,200" detail="▲ 12.4% vs semana previa" />
-        <KpiCard label="Facturación MXN" value="$964,000" detail="▲ 8.1% vs semana previa" delay="60ms" />
-        <KpiCard label="Horas no facturadas" value="38.5 h" detail="3 repos pendientes" tone="amber" delay="120ms" />
-        <KpiCard label="Clientes activos" value="14" detail="2 en onboarding" tone="muted" delay="180ms" />
+        <KpiCard label="Facturación MXN" value="$964,000" detail="▲ 8.1% vs semana previa" className="[animation-delay:60ms]" />
+        <KpiCard label="Horas no facturadas" value="38.5 h" detail="3 repos pendientes" tone="amber" className="[animation-delay:120ms]" />
+        <KpiCard label="Clientes activos" value="14" detail="2 en onboarding" tone="muted" className="[animation-delay:180ms]" />
       </section>
 
       <section className="grid grid-cols-1 gap-4 lg:grid-cols-3">

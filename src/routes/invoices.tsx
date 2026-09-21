@@ -62,12 +62,13 @@ function InvoicesPage() {
 
           <div className="mt-4 space-y-2.5">
             {invoices.map((invoice) => (
-              <button
+              <Button
                 key={invoice.id}
                 type="button"
+                variant="outline"
                 onClick={() => setSelected(invoice)}
                 className={cn(
-                  "w-full rounded-xl border p-3 text-left transition-colors",
+                  "h-auto w-full justify-start rounded-xl p-3 text-left",
                   selected.id === invoice.id ? "border-clay bg-clay-soft/70" : "border-line bg-background hover:bg-clay-soft/40",
                 )}
               >
@@ -80,7 +81,7 @@ function InvoicesPage() {
                   <span>{invoice.method}</span>
                   <span className="font-bold text-foreground">{invoice.total}</span>
                 </div>
-              </button>
+              </Button>
             ))}
           </div>
         </Panel>

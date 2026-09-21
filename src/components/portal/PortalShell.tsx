@@ -179,20 +179,17 @@ export function KpiCard({
   value,
   detail,
   tone = "accent",
-  delay = "0ms",
+  className = "",
 }: {
   label: string;
   value: string;
   detail: string;
   tone?: "accent" | "amber" | "muted";
-  delay?: string;
+  className?: string;
 }) {
   const detailClass = tone === "accent" ? "text-accent" : tone === "amber" ? "text-amberc" : "text-muted-foreground";
   return (
-    <div
-      className="rounded-2xl bg-surface p-4 ring-1 ring-border/70 animate-[rise_0.5s_var(--ease)_both]"
-      style={{ animationDelay: delay }}
-    >
+    <div className={cn("rounded-2xl bg-surface p-4 ring-1 ring-border/70 animate-[rise_0.5s_var(--ease)_both]", className)}>
       <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">{label}</p>
       <p className="mt-2 font-mono text-2xl font-bold tracking-tight">{value}</p>
       <p className={cn("mt-1 font-mono text-[11px]", detailClass)}>{detail}</p>
