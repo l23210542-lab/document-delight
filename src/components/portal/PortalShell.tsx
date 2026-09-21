@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import {
-  BarChart3,
   Clock3,
   FileText,
   FolderGit2,
@@ -9,6 +8,7 @@ import {
   Search,
   UsersRound,
   Wifi,
+  type LucideIcon,
 } from "lucide-react";
 import type { ReactNode } from "react";
 
@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils";
 type NavItem = {
   label: string;
   to: "/dashboard" | "/my-time" | "/clients" | "/projects" | "/invoices";
-  icon: typeof LayoutDashboard;
+  icon: LucideIcon;
 };
 
 const navItems: NavItem[] = [
